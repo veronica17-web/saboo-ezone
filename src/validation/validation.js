@@ -47,6 +47,9 @@ const isValid = function (value) {
     const ratingRegex = /^[1-5]{1}$/;
     return ratingRegex.test(data);
   };
+  const isValidPhone = (Mobile) => {
+    return /^[6-9]\d{9}$/.test(Mobile)
+};
   
   module.exports = {
     isValid,
@@ -58,4 +61,5 @@ const isValid = function (value) {
     checkISBN,
     checkDate,
     isRating,
+    isValidPhone
   };
